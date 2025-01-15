@@ -114,8 +114,8 @@ class DieMods:
 
         return die_mod
 
+    @staticmethod
     def mail_mods(
-        self,
         die_roll,
         freight_traffic_die_mod,
         armed,
