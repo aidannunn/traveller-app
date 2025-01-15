@@ -116,7 +116,6 @@ class DieMods:
 
     @staticmethod
     def mail_mods(
-        die_roll,
         freight_traffic_die_mod,
         armed,
         source_planet,
