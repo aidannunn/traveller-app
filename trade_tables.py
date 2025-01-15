@@ -1,4 +1,4 @@
-class Tables:
+class TradeTables:
     def __init__(self):
         self.passage_value_dict = {
             1: [9000, 6500, 2000, 700, 1000],
