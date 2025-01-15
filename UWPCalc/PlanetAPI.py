@@ -1,34 +1,33 @@
-import unittest
 from enum import Enum
 import xml.etree.ElementTree as ET
 
-class TestTablesMethods(unittest.TestCase):
-    def setUp(self):
-        self.UWPC_obj = UWPCalculator()
 
-    def test(self):
-        print(self.UWPC_obj.uwpTranslator())
-
-    def test2(self):
-        print(self.UWPC_obj.xmlReader())
+import PlanetClass
 
 
-class UWPCalculator:
+
+class PlanetAPI:
+    Planets = {}
 
 
-    def xmlReader(self):
+    def __init__(self):
+        self.Planets = self.PopulatePlanetDictionaryFromXML()
+
+
+    def PopulatePlanetDictionaryFromXML(self):
         tree = ET.parse("item.xml")
         root = tree.getroot()
+        output = {}
+        pc = PlanetClass
 
-        for planet in root.findall('Planet'):
-            name = planet.find('Name').text
-            UWP = planet.find('UWP').text
-            tcodes = planet.find('TradeCodes').text
-
-
-            print(f"Name: {name}, UWP: {UWP}, Trade Codes: {tcodes}")
-            print("HI")
-
+        for item in root.findall('Planet'):
+            new_planet = (pc.make_planet(item.find('Name').text,
+                                         item.find("UWP").text,
+                                         item.find("Bases").text,
+                                         item.find("TradeCodes").text.split(',').copy(),
+                                         item.find("TravelZone").text))
+            output.update({new_planet.Name: new_planet})
+        return output
 
 
     def uwpTranslator(self, uwpcode):
