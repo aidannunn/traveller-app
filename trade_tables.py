@@ -1,8 +1,4 @@
-import json
-import re
-
-
-class Tables:
+class TradeTables:
     def __init__(self):
         self.passage_value_dict = {
             1: [9000, 6500, 2000, 700, 1000],
@@ -57,12 +53,14 @@ class Tables:
             20: 10,
         }
 
-    def passage_and_freight_value_table(
-        self, parsecs_travelled, freight, passage_quality, passenger
-    ):
-        if passenger:
-            return self.passage_value_dict[parsecs_travelled][passage_quality]
-        if freight:
-            return self.passage_value_dict[parsecs_travelled][4]
-        else:
-            return 0
+    def passenger_value_table(self, parsecs_travelled, passage_quality):
+        return self.passage_value_dict[parsecs_travelled][passage_quality]
+
+    def freight_value_table(self, parsecs_travelled):
+        return self.passage_value_dict[parsecs_travelled][4]
+
+    def freight_traffic_table(self, die_roll, die_mod):
+        return self.freight_traffic_dict[die_roll + die_mod]
+
+    def passenger_traffic_table(self, die_roll, die_mod):
+        return self.passenger_traffic_dict[die_roll + die_mod]
