@@ -148,10 +148,6 @@ def print_available_traffic(
             f"{num_pieces_of_freight} pieces of {cargo_size_arr[key-1]} ton {freight_dict[key]} Freight available"
         )
     if mail_exists:
-        
-    return
-
-
-def fill_ship():
-
+        num_mail_containers = roll_die()
+        print(f"{num_mail_containers} five ton Mail containers available")
     return

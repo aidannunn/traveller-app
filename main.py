@@ -7,13 +7,19 @@ from UWPCalc.PlanetAPI import PlanetAPI
 if __name__ == "__main__":
     planet_api_obj = PlanetAPI()
 
-    print("Welcome to the Galactic Trade Simplifier")
+    print("Welcome to the Galactic Trade Network")
+
     departure_planet = "Corgi"  # input("Enter your departure planet:")
     destination_planet = "Corgi2"  # input("Enter your destination planet:")
     parsecs_travelled = 1  # input("Enter the number of parsecs you are travelling:")
     highest_skill = 1  # input(
     # "Enter the highest from among broker, carouse, or streetwise:"
     # )
+
+    print(
+        f"Here is the available traffic from {departure_planet} to {destination_planet}"
+    )
+
     steward_skill = -3
 
     source_planet = planet_api_obj.Planets[departure_planet]
