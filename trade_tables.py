@@ -60,7 +60,17 @@ class TradeTables:
         return self.passage_value_dict[parsecs_travelled][4]
 
     def freight_traffic_table(self, die_roll, die_mod):
-        return self.freight_traffic_dict[die_roll + die_mod]
+        if die_roll + die_mod < 1:
+            return self.freight_traffic_dict[1]
+        elif die_roll + die_mod > 20:
+            return self.freight_traffic_dict[20]
+        else:
+            return self.freight_traffic_dict[die_roll + die_mod]
 
     def passenger_traffic_table(self, die_roll, die_mod):
-        return self.passenger_traffic_dict[die_roll + die_mod]
+        if die_roll + die_mod < 1:
+            return self.passenger_traffic_dict[1]
+        elif die_roll + die_mod > 20:
+            return self.passenger_traffic_dict[20]
+        else:
+            return self.passenger_traffic_dict[die_roll + die_mod]

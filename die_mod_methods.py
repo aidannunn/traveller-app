@@ -1,6 +1,6 @@
 class DieMods:
     @staticmethod
-    def passenger_quality_mod(self, passenger_quality):
+    def passenger_quality_mod(passenger_quality):
         if passenger_quality == 1:
             return -4
         elif passenger_quality == 4:
@@ -9,7 +9,7 @@ class DieMods:
             return 0
 
     @staticmethod
-    def cargo_quality_mod(self, cargo_quality):
+    def cargo_quality_mod(cargo_quality):
         if cargo_quality == 1:
             return -4
         elif cargo_quality == 3:
@@ -18,7 +18,7 @@ class DieMods:
             return 0
 
     @staticmethod
-    def planet_population_passenger_mod(self, planet_population):
+    def planet_population_passenger_mod(planet_population):
         if planet_population <= 1:
             return -4
         elif planet_population == 6 or planet_population == 7:
@@ -29,7 +29,7 @@ class DieMods:
             return 0
 
     @staticmethod
-    def planet_population_cargo_mod(self, planet_population):
+    def planet_population_cargo_mod(planet_population):
         if planet_population <= 1:
             return -4
         elif planet_population == 6 or planet_population == 7:
@@ -40,7 +40,7 @@ class DieMods:
             return 0
 
     @staticmethod
-    def starport_quality_mod(self, starport_quality):
+    def starport_quality_mod(starport_quality):
         if starport_quality == "A":
             return 2
         elif starport_quality == "B":
@@ -83,12 +83,16 @@ class DieMods:
         die_mod += die_roll - 8
         die_mod += steward_skill
         die_mod += self.passenger_quality_mod(passenger_quality)
-        die_mod += self.planet_population_passenger_mod(source_planet.population)
-        die_mod += self.planet_population_passenger_mod(destination_planet.population)
-        die_mod += self.starport_quality_mod(source_planet.quality)
-        die_mod += self.starport_quality_mod(destination_planet.quality)
-        die_mod += self.planet_zone_passenger_mod(source_planet.zone)
-        die_mod += self.planet_zone_passenger_mod(destination_planet.zone)
+        die_mod += self.planet_population_passenger_mod(
+            int(source_planet.UWPObject.Population)
+        )
+        die_mod += self.planet_population_passenger_mod(
+            int(destination_planet.UWPObject.Population)
+        )
+        die_mod += self.starport_quality_mod(source_planet.UWPObject.Starport)
+        die_mod += self.starport_quality_mod(destination_planet.UWPObject.Starport)
+        die_mod += self.planet_zone_passenger_mod(source_planet.TravelZone)
+        die_mod += self.planet_zone_passenger_mod(destination_planet.TravelZone)
         die_mod += 1 - parsecs_traveled
 
         return die_mod
@@ -104,24 +108,50 @@ class DieMods:
         die_mod = 0
         die_mod += die_roll - 8
         die_mod += self.cargo_quality_mod(cargo_quality)
-        die_mod += self.planet_population_cargo_mod(source_planet.population)
-        die_mod += self.planet_population_cargo_mod(destination_planet.population)
-        die_mod += self.starport_quality_mod(source_planet.starport)
-        die_mod += self.starport_quality_mod(destination_planet.starport)
-        die_mod += self.planet_zone_cargo_mod(source_planet.zone)
-        die_mod += self.planet_zone_cargo_mod(destination_planet.zone)
+        die_mod += self.planet_population_cargo_mod(
+            int(source_planet.UWPObject.Population)
+        )
+        die_mod += self.planet_population_cargo_mod(
+            int(destination_planet.UWPObject.Population)
+        )
+        die_mod += self.starport_quality_mod(source_planet.UWPObject.Starport)
+        die_mod += self.starport_quality_mod(destination_planet.UWPObject.Starport)
+        die_mod += self.planet_zone_cargo_mod(source_planet.TravelZone)
+        die_mod += self.planet_zone_cargo_mod(destination_planet.TravelZone)
         die_mod += 1 - parsecs_traveled
 
         return die_mod
 
-    @staticmethod
-    def mail_mods(
-        freight_traffic_die_mod,
-        armed,
+    def mail_freight_mod(
+        self,
         source_planet,
+        destination_planet,
+    ):
+        die_mod = 0
+        die_mod += self.planet_population_cargo_mod(
+            int(source_planet.UWPObject.Population)
+        )
+        die_mod += self.planet_population_cargo_mod(
+            int(destination_planet.UWPObject.Population)
+        )
+        die_mod += self.starport_quality_mod(source_planet.UWPObject.Starport)
+        die_mod += self.starport_quality_mod(destination_planet.UWPObject.Starport)
+        die_mod += self.planet_zone_cargo_mod(source_planet.TravelZone)
+        die_mod += self.planet_zone_cargo_mod(destination_planet.TravelZone)
+
+        return die_mod
+
+    def mail_mods(
+        self,
+        source_planet,
+        destination_planet,
+        armed,
         naval_or_scout_rank,
         social_die_mod,
     ):
+        freight_traffic_die_mod = self.mail_freight_mod(
+            source_planet, destination_planet
+        )
         die_mod = 0
         if freight_traffic_die_mod <= -10:
             die_mod += -2
@@ -135,7 +165,7 @@ class DieMods:
             die_mod += 2
         if armed:
             die_mod += 2
-        if source_planet.tech_level <= 5:
+        if int(source_planet.UWPObject.TechLevel) <= 5:
             die_mod += -4
         die_mod += naval_or_scout_rank
         die_mod += social_die_mod
