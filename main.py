@@ -17,7 +17,7 @@ if __name__ == "__main__":
     # )
 
     print(
-        f"Here is the available traffic from {departure_planet} to {destination_planet}"
+        f"Here is the available traffic from {departure_planet} to {destination_planet}\n"
     )
 
     steward_skill = -3
@@ -66,4 +66,4 @@ if __name__ == "__main__":
         passenger_counts_dict, freight_counts_dict, cargo_size_arr, mail_exists
     )
 
-    print("done")
+    print("\nThank you for using the Galactic Trade Network!")

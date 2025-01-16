@@ -149,5 +149,5 @@ def print_available_traffic(
         )
     if mail_exists:
         num_mail_containers = roll_die()
-        print(f"{num_mail_containers} five ton Mail containers available")
+        print(f"{num_mail_containers} five ton Mail containers available worth Cr25000")
     return
