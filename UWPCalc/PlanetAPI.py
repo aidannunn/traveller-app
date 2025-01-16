@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-import PlanetClass as pc
+import PlanetClass
 
 
 class PlanetAPI:
@@ -15,7 +15,7 @@ class PlanetAPI:
 
         for item in root.findall('Planet'):
 
-            new_planet = pc.Planet(item.find('Name').text,
+            new_planet = PlanetClass.Planet(item.find('Name').text,
                                 item.find("UWP").text,
                                 item.find("Bases").text,
                                 item.find("TradeCodes").text.split(',').copy(),
