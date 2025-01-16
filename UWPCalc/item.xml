@@ -1,0 +1,20 @@
+<System>
+
+    <Planet>
+        <Name>Corgi</Name>
+        <UWP>CA6A643-9</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ri, Wa</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+
+    <Planet>
+        <Name>Corgi2</Name>
+        <UWP>CA6A643-9</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ri, Wa</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+</System>
