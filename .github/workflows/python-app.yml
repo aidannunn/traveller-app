@@ -28,7 +28,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install nuitka
+        pip install psgcompiler
         pip install flake8
     - name: Lint with flake8
       run: |
@@ -36,9 +36,9 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Create exe with nuitka
+    - name: Create exe with psgcompiler
       run: |
-         printf "yes\nyes\n" | python -m nuitka --onefile --plugin-enable=tk-inter --windows-disable-console --windows-icon-from-ico=ship-logo.ico --include-data-file="UWPCalc/item.xml=database" trade_app.py
+         psgcompiler --onefile --icon ship-logo.ico --add-data "UWPCalc/item.xml;database/" trade_app.py
     - name: Upload the .exe artifact
       uses: actions/upload-artifact@v4
       with:
