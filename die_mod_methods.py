@@ -84,10 +84,10 @@ class DieMods:
         die_mod += steward_skill
         die_mod += self.passenger_quality_mod(passenger_quality)
         die_mod += self.planet_population_passenger_mod(
-            int(source_planet.UWPObject.Population)
+            int(source_planet.UWPObject.Population, 16)
         )
         die_mod += self.planet_population_passenger_mod(
-            int(destination_planet.UWPObject.Population)
+            int(destination_planet.UWPObject.Population, 16)
         )
         die_mod += self.starport_quality_mod(source_planet.UWPObject.Starport)
         die_mod += self.starport_quality_mod(destination_planet.UWPObject.Starport)
@@ -109,10 +109,10 @@ class DieMods:
         die_mod += die_roll - 8
         die_mod += self.cargo_quality_mod(cargo_quality)
         die_mod += self.planet_population_cargo_mod(
-            int(source_planet.UWPObject.Population)
+            int(source_planet.UWPObject.Population, 16)
         )
         die_mod += self.planet_population_cargo_mod(
-            int(destination_planet.UWPObject.Population)
+            int(destination_planet.UWPObject.Population, 16)
         )
         die_mod += self.starport_quality_mod(source_planet.UWPObject.Starport)
         die_mod += self.starport_quality_mod(destination_planet.UWPObject.Starport)
@@ -129,10 +129,10 @@ class DieMods:
     ):
         die_mod = 0
         die_mod += self.planet_population_cargo_mod(
-            int(source_planet.UWPObject.Population)
+            int(source_planet.UWPObject.Population, 16)
         )
         die_mod += self.planet_population_cargo_mod(
-            int(destination_planet.UWPObject.Population)
+            int(destination_planet.UWPObject.Population, 16)
         )
         die_mod += self.starport_quality_mod(source_planet.UWPObject.Starport)
         die_mod += self.starport_quality_mod(destination_planet.UWPObject.Starport)
