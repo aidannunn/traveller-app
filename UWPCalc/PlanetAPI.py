@@ -7,7 +7,7 @@ class PlanetAPI:
 
     def __init__(self):
         self.database_path = Path(__file__).parent
-        self.Planets = self.populate_planet_dictionary_from_xml()
+        self.planets_dict = self.populate_planet_dictionary_from_xml()
 
     def populate_planet_dictionary_from_xml(self):
         tree = xml.etree.ElementTree.parse(self.database_path / "item.xml")
