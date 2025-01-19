@@ -2,7 +2,9 @@ from other_methods import roll_die, roll_x_dice
 
 
 class StuffCount:
-    def __init__(self, passenger_counts_dict, freight_counts_dict, mail_exists):
+    def __init__(
+        self, passenger_counts_dict, freight_counts_dict, mail_exists, cargo_size_arr
+    ):
         self.high_passengers = roll_x_dice(passenger_counts_dict[1])
         self.middle_passengers = roll_x_dice(passenger_counts_dict[2])
         self.basic_passengers = roll_x_dice(passenger_counts_dict[3])
@@ -10,6 +12,9 @@ class StuffCount:
         self.major_freight = roll_x_dice(freight_counts_dict[1])
         self.minor_freight = roll_x_dice(freight_counts_dict[2])
         self.incidental_freight = roll_x_dice(freight_counts_dict[3])
+        self.major_freight_size = cargo_size_arr[0]
+        self.minor_freight_size = cargo_size_arr[1]
+        self.incidental_freight_size = cargo_size_arr[2]
         self.mail_exists = mail_exists
         if mail_exists:
             self.mail_containers = roll_die()

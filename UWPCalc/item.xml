@@ -1,7 +1,7 @@
 <System>
 
     <Planet>
-        <Name>Corgi</Name>
+        <Name>corgi</Name>
         <UWP>CA6A643-9</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ri, Wa</TradeCodes>
@@ -9,7 +9,7 @@
     </Planet>
 
     <Planet>
-        <Name>Corgi2</Name>
+        <Name>corgi2</Name>
         <UWP>CA6A643-9</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ri, Wa</TradeCodes>
@@ -17,7 +17,7 @@
     </Planet>
 
     <Planet>
-        <Name>Mug</Name>
+        <Name>gug</Name>
         <UWP>D633420-6</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ni</TradeCodes>
@@ -25,7 +25,7 @@
     </Planet>
 
     <Planet>
-        <Name>Zhang's World</Name>
+        <Name>zhang's world</Name>
         <UWP>D546366-2</UWP>
         <Bases>Y</Bases>
         <TradeCodes>Lo, Lt</TradeCodes>
@@ -33,7 +33,7 @@
     </Planet>
 
     <Planet>
-        <Name>Town</Name>
+        <Name>town</Name>
         <UWP>A664865-E</UWP>
         <Bases>Y</Bases>
         <TradeCodes>Ri, Ht</TradeCodes>
@@ -41,7 +41,7 @@
     </Planet>
 
     <Planet>
-        <Name>Ganpe</Name>
+        <Name>ganpe</Name>
         <UWP>A761556-9</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ni</TradeCodes>
@@ -49,7 +49,7 @@
     </Planet>
 
     <Planet>
-        <Name>San Athiya</Name>
+        <Name>san athiya</Name>
         <UWP>C559789-6</UWP>
         <Bases>N</Bases>
         <TradeCodes>EMPTY</TradeCodes>
@@ -57,7 +57,7 @@
     </Planet>
 
     <Planet>
-        <Name>Port Finlay</Name>
+        <Name>port finlay</Name>
         <UWP>C6459C9-A</UWP>
         <Bases>N</Bases>
         <TradeCodes>EMPTY</TradeCodes>
@@ -65,7 +65,7 @@
     </Planet>
 
     <Planet>
-        <Name>Thermopolis</Name>
+        <Name>thermopolis</Name>
         <UWP>A486315-C</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ht, Lo</TradeCodes>
@@ -73,7 +73,7 @@
     </Planet>
 
     <Planet>
-        <Name>FD-4KY-1</Name>
+        <Name>fd-4ky-1</Name>
         <UWP>X68A000-0</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ba, Wa</TradeCodes>
@@ -81,7 +81,7 @@
     </Planet>
 
     <Planet>
-        <Name>Port Angel</Name>
+        <Name>port angel</Name>
         <UWP>B525AE9-A</UWP>
         <Bases>Y</Bases>
         <TradeCodes>Hi, In</TradeCodes>
@@ -89,7 +89,7 @@
     </Planet>
 
     <Planet>
-        <Name>Cloister</Name>
+        <Name>cloister</Name>
         <UWP>B589567-8</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ni</TradeCodes>
@@ -97,7 +97,7 @@
     </Planet>
 
     <Planet>
-        <Name>Blob World</Name>
+        <Name>blob world</Name>
         <UWP>X7C0B00-E</UWP>
         <Bases>N</Bases>
         <TradeCodes>EMPTY</TradeCodes>
@@ -105,7 +105,7 @@
     </Planet>
 
     <Planet>
-        <Name>Clyde's World</Name>
+        <Name>clyde's world</Name>
         <UWP>E9A7650-8</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ni</TradeCodes>
@@ -113,7 +113,7 @@
     </Planet>
 
     <Planet>
-        <Name>Bortang</Name>
+        <Name>bortang</Name>
         <UWP>D645323-8</UWP>
         <Bases>N</Bases>
         <TradeCodes>Lo</TradeCodes>
@@ -121,7 +121,7 @@
     </Planet>
 
     <Planet>
-        <Name>St. Nanak</Name>
+        <Name>st. nanak</Name>
         <UWP>A200768-E</UWP>
         <Bases>N</Bases>
         <TradeCodes>De, Ht, Na, Va</TradeCodes>
@@ -129,7 +129,7 @@
     </Planet>
 
     <Planet>
-        <Name>Hygwapha</Name>
+        <Name>hygwapha</Name>
         <UWP>D77A8B9-7</UWP>
         <Bases>N</Bases>
         <TradeCodes>Wa</TradeCodes>
@@ -145,7 +145,7 @@
     </Planet>
 
     <Planet>
-        <Name>Bolton</Name>
+        <Name>bolton</Name>
         <UWP>B524442-A</UWP>
         <Bases>Y</Bases>
         <TradeCodes>Ni</TradeCodes>
@@ -153,7 +153,7 @@
     </Planet>
 
     <Planet>
-        <Name>Port Spaatz</Name>
+        <Name>port spaatz</Name>
         <UWP>E546366-5</UWP>
         <Bases>N</Bases>
         <TradeCodes>Lt, Lo</TradeCodes>
@@ -161,7 +161,7 @@
     </Planet>
 
     <Planet>
-        <Name>Sapa Austin</Name>
+        <Name>sapa austin</Name>
         <UWP>B568551-B</UWP>
         <Bases>Y</Bases>
         <TradeCodes>Ag, Ni</TradeCodes>
@@ -169,7 +169,7 @@
     </Planet>
 
     <Planet>
-        <Name>Dodge</Name>
+        <Name>dodge</Name>
         <UWP>C4238B8-9</UWP>
         <Bases>N</Bases>
         <TradeCodes>Na, Po</TradeCodes>
@@ -177,7 +177,7 @@
     </Planet>
 
     <Planet>
-        <Name>Willemsted</Name>
+        <Name>willemsted</Name>
         <UWP>A765979-D</UWP>
         <Bases>Y</Bases>
         <TradeCodes>Ga, Hi, Ht</TradeCodes>
@@ -185,7 +185,7 @@
     </Planet>
 
     <Planet>
-        <Name>C3'transistor</Name>
+        <Name>c3'transistor</Name>
         <UWP>B230535-E</UWP>
         <Bases>Y</Bases>
         <TradeCodes>De, Ht, In</TradeCodes>
@@ -193,7 +193,7 @@
     </Planet>
 
     <Planet>
-        <Name>New Augusta</Name>
+        <Name>new augusta</Name>
         <UWP>B344AA0-D</UWP>
         <Bases>N</Bases>
         <TradeCodes>Hi, Ht, In</TradeCodes>
@@ -201,7 +201,7 @@
     </Planet>
 
     <Planet>
-        <Name>SE2A2X5</Name>
+        <Name>Se2a2x5</Name>
         <UWP>X545540-0</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ag, Lt, Ni</TradeCodes>
@@ -209,7 +209,7 @@
     </Planet>
 
     <Planet>
-        <Name>SE9Z3T3</Name>
+        <Name>Se9z3t3</Name>
         <UWP>X120000-0</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ba</TradeCodes>
@@ -217,7 +217,7 @@
     </Planet>
 
     <Planet>
-        <Name>Outremer</Name>
+        <Name>outremer</Name>
         <UWP>E740362-5</UWP>
         <Bases>Y</Bases>
         <TradeCodes>De, Lo, Lt</TradeCodes>
@@ -225,7 +225,7 @@
     </Planet>
 
     <Planet>
-        <Name>Tigris</Name>
+        <Name>tigris</Name>
         <UWP>D630462-5</UWP>
         <Bases>N</Bases>
         <TradeCodes>Di, Lt, Ni, Po</TradeCodes>
@@ -233,7 +233,7 @@
     </Planet>
 
     <Planet>
-        <Name>Dhirim</Name>
+        <Name>dhirim</Name>
         <UWP>C987674-6</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ag, Ni, Ri</TradeCodes>
@@ -241,7 +241,7 @@
     </Planet>
 
     <Planet>
-        <Name>Shtil</Name>
+        <Name>shtil</Name>
         <UWP>B763556-8</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ni</TradeCodes>
