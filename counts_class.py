@@ -2,9 +2,7 @@ from other_methods import roll_die, roll_x_dice
 
 
 class StuffCount:
-    def __init__(
-        self, passenger_counts_dict, freight_counts_dict, cargo_size_arr, mail_exists
-    ):
+    def __init__(self, passenger_counts_dict, freight_counts_dict, mail_exists):
         self.high_passengers = roll_x_dice(passenger_counts_dict[1])
         self.middle_passengers = roll_x_dice(passenger_counts_dict[2])
         self.basic_passengers = roll_x_dice(passenger_counts_dict[3])
@@ -12,8 +10,9 @@ class StuffCount:
         self.major_freight = roll_x_dice(freight_counts_dict[1])
         self.minor_freight = roll_x_dice(freight_counts_dict[2])
         self.incidental_freight = roll_x_dice(freight_counts_dict[3])
+        self.mail_exists = mail_exists
         if mail_exists:
-            self.mail = roll_die()
+            self.mail_containers = roll_die()
 
     # FIXME outdated - change to use self variables
     def print_available_traffic(

@@ -90,7 +90,7 @@ if __name__ == "__main__":
             )
 
             counts_obj = StuffCount(
-                passenger_counts_dict, freight_counts_dict, cargo_size_arr, mail_exists
+                passenger_counts_dict, freight_counts_dict, mail_exists
             )
 
             window.close()

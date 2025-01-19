@@ -23,7 +23,33 @@ def create_layout_2(counts_obj, departure_planet, destination_planet):
                 f"Here is the available traffic from {departure_planet} to {destination_planet}"
             )
         ],
+        [sg.Text(f"High Passengers: {counts_obj.high_passengers}")],
+        [sg.Text(f"Middle Passengers: {counts_obj.middle_passengers}")],
+        [sg.Text(f"Basic Passengers: {counts_obj.basic_passengers}")],
+        [sg.Text(f"Low Passengers: {counts_obj.low_passengers}")],
+        [sg.Text(f"Major Freight: {counts_obj.major_freight}")],
+        [sg.Text(f"Minor Freight: {counts_obj.minor_freight}")],
+        [sg.Text(f"Incidental Freight: {counts_obj.incidental_freight}")],
         [sg.Text(f"Thank you for using the Galactic Trade Network!")],
         [sg.Button("Back"), sg.Button("Exit")],
     ]
+    if counts_obj.mail_exists:
+        layout2 = [
+            [
+                sg.Text(
+                    f"Here is the available traffic from {departure_planet} to {destination_planet}"
+                )
+            ],
+            [sg.Text(f"High Passengers: {counts_obj.high_passengers}")],
+            [sg.Text(f"Middle Passengers: {counts_obj.middle_passengers}")],
+            [sg.Text(f"Basic Passengers: {counts_obj.basic_passengers}")],
+            [sg.Text(f"Low Passengers: {counts_obj.low_passengers}")],
+            [sg.Text(f"Major Freight: {counts_obj.major_freight}")],
+            [sg.Text(f"Minor Freight: {counts_obj.minor_freight}")],
+            [sg.Text(f"Incidental Freight: {counts_obj.incidental_freight}")],
+            [sg.Text(f"Mail Containers: {counts_obj.mail_containers}")],
+            [sg.Text(f"Thank you for using the Galactic Trade Network!")],
+            [sg.Button("Back"), sg.Button("Exit")],
+        ]
+
     return layout2
