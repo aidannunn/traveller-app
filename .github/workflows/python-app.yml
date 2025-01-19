@@ -36,9 +36,15 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Create exe with pyinstaller
-      run: |
-        python -m nuitka --onefile --windows-icon-from-ico=ship-logo.ico --include-data-file="UWPCalc/item.xml=database" trade_app.py
+    - name: Create exe with nuitka
+      uses: Nuitka/Nuitka-Action@main
+      with:
+        nuitka-version: main
+        script-name: trade_app.py
+        mode: standalone
+        enable-plugins: tk-inter
+      #run: |
+      #  python -m nuitka --onefile --windows-icon-from-ico=ship-logo.ico --include-data-file="UWPCalc/item.xml=database" trade_app.py
     - name: Upload the .exe artifact
       uses: actions/upload-artifact@v4
       with:
