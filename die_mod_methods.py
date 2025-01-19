@@ -165,7 +165,7 @@ class DieMods:
             die_mod += 2
         if armed:
             die_mod += 2
-        if int(source_planet.UWPObject.TechLevel) <= 5:
+        if int(source_planet.UWPObject.TechLevel, 16) <= 5:
             die_mod += -4
         die_mod += naval_or_scout_rank
         die_mod += social_die_mod
