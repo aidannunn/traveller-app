@@ -38,7 +38,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Create exe with nuitka
       run: |
-         echo -e "yes\nyes" | python -m nuitka --onefile --windows-icon-from-ico=ship-logo.ico --include-data-file="UWPCalc/item.xml=database" trade_app.py
+         printf "yes\nyes\n" | python -m nuitka --onefile --windows-icon-from-ico=ship-logo.ico --include-data-file="UWPCalc/item.xml=database" trade_app.py
     - name: Upload the .exe artifact
       uses: actions/upload-artifact@v4
       with:
