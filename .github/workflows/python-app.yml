@@ -44,5 +44,5 @@ jobs:
       with:
         name: trade-app-exe
         path: dist/trade_app.exe
-        include-hidden-file: true
+        include-hidden-files: true
         
