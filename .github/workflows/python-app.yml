@@ -43,6 +43,6 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: trade-app-exe
-        path: dist/trade_app.exe
+        path: trade_app.exe
         include-hidden-files: true
         
