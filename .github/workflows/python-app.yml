@@ -38,12 +38,12 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Create exe with pyinstaller
       run: |
-        pyinstaller --onefile --noconsole --icon=ship-logo.ico main.py
+        pyinstaller --onefile --noconsole --icon=ship-logo.ico --add-data "UWPCalc/item.xml" trade_app.py
     - name: List files in dist/ directory  # List the files in dist to see if exe was created
       run: dir dist
     - name: Upload the .exe artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: trade-app-exe
-        path: dist/main.exe
+        path: dist/trade_app.exe
         
