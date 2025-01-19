@@ -16,7 +16,7 @@ def create_layout_1():
     return layout1
 
 
-def create_layout_2():
+def create_layout_2(counts_obj, departure_planet, destination_planet):
     layout2 = [
         [
             sg.Text(

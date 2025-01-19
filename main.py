@@ -7,13 +7,12 @@ from trade_tables import *
 from die_mod_methods import *
 from UWPCalc.PlanetAPI import PlanetAPI
 import PySimpleGUI as sg
+from counts_class import StuffCount
 
 if __name__ == "__main__":
     planet_api_obj = PlanetAPI()
     home_dir = Path(__file__).parent
     icon_path = home_dir.joinpath("ship-logo.ico")
-    departure_planet = ""
-    destination_planet = ""
 
     # All the stuff inside your window.
     sg.theme("Neon Green 1")
@@ -44,14 +43,14 @@ if __name__ == "__main__":
 
         if event == "Ok":
 
-            departure_planet = values[0]
-            destination_planet = values[1]
+            departure_planet_name = values[0]
+            destination_planet_name = values[1]
             highest_skill = int(values[2])
             parsecs_travelled = int(values[3])
             steward_skill = -3
 
-            source_planet = planet_api_obj.Planets[departure_planet]
-            destination_planet = planet_api_obj.Planets[destination_planet]
+            source_planet = planet_api_obj.Planets[departure_planet_name]
+            destination_planet = planet_api_obj.Planets[destination_planet_name]
 
             trade_tables_obj = TradeTables()
             die_mods_obj = DieMods()
@@ -89,12 +88,15 @@ if __name__ == "__main__":
                 naval_or_scout_rank=4,
                 social_die_mod=1,
             )
-            window.close()
-            layout = create_layout_2()
-            window = sg.Window("Trade Federation Network", layout, icon=icon_path)
 
-            print_available_traffic(
+            counts_obj = StuffCount(
                 passenger_counts_dict, freight_counts_dict, cargo_size_arr, mail_exists
             )
+
+            window.close()
+            layout = create_layout_2(
+                counts_obj, departure_planet_name, destination_planet_name
+            )
+            window = sg.Window("Trade Federation Network", layout, icon=icon_path)
 
     window.close()
