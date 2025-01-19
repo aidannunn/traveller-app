@@ -1,5 +1,7 @@
 from idlelib.mainmenu import menudefs
 from pathlib import Path
+
+from gui import *
 from other_methods import *
 from trade_tables import *
 from die_mod_methods import *
@@ -10,21 +12,13 @@ if __name__ == "__main__":
     planet_api_obj = PlanetAPI()
     home_dir = Path(__file__).parent
     icon_path = home_dir.joinpath("ship-logo.ico")
+    departure_planet = ""
+    destination_planet = ""
 
     # All the stuff inside your window.
     sg.theme("Neon Green 1")
 
-    layout = [
-        [sg.Text("Welcome to the Trade Federation Network")],
-        [sg.Text("Departure:"), sg.InputText()],
-        [sg.Text("Destination:"), sg.InputText()],
-        [sg.Text("Distance:"), sg.InputText()],
-        [
-            sg.Text("Highest skill among broker, carouse, or streetwise:"),
-            sg.InputText(),
-        ],
-        [sg.Button("Ok"), sg.Button("Cancel")],
-    ]
+    layout = create_layout_1()
 
     # Create the Window
     window = sg.Window("Trade Federation Network", layout, icon=icon_path)
@@ -32,62 +26,75 @@ if __name__ == "__main__":
     # Event Loop to process "events" and get the "values" of the inputs
     while True:
         event, values = window.read()
+
         if (
-            event == sg.WIN_CLOSED or event == "Cancel"
+            event == sg.WIN_CLOSED or event == "Cancel" or event == "Exit"
         ):  # if user closes window or clicks cancel
             break
-        print("You entered ", values[0])
 
-    print(
-        f"\nHere is the available traffic from {departure_planet} to {destination_planet}"
-    )
+        if event == "Back":
+            departure_planet = ""
+            destination_planet = ""
+            highest_skill = 0
+            parsecs_travelled = 0
+            values = []
+            window.close()
+            layout = create_layout_1()
+            window = sg.Window("Trade Federation Network", layout, icon=icon_path)
 
-    steward_skill = -3
+        if event == "Ok":
 
-    source_planet = planet_api_obj.Planets[departure_planet]
-    destination_planet = planet_api_obj.Planets[destination_planet]
+            departure_planet = values[0]
+            destination_planet = values[1]
+            highest_skill = int(values[2])
+            parsecs_travelled = int(values[3])
+            steward_skill = -3
 
-    trade_tables_obj = TradeTables()
-    die_mods_obj = DieMods()
+            source_planet = planet_api_obj.Planets[departure_planet]
+            destination_planet = planet_api_obj.Planets[destination_planet]
 
-    passenger_quality_arr = [1, 2, 3, 4]
-    passenger_counts_dict = generate_passenger_counts(
-        passenger_quality_arr,
-        die_mods_obj,
-        trade_tables_obj,
-        highest_skill,
-        steward_skill,
-        source_planet,
-        destination_planet,
-        parsecs_travelled,
-    )
+            trade_tables_obj = TradeTables()
+            die_mods_obj = DieMods()
 
-    freight_quality_arr = [1, 2, 3]
-    freight_counts_dict = generate_freight_counts(
-        freight_quality_arr,
-        die_mods_obj,
-        trade_tables_obj,
-        highest_skill,
-        source_planet,
-        destination_planet,
-        parsecs_travelled,
-    )
+            passenger_quality_arr = [1, 2, 3, 4]
+            passenger_counts_dict = generate_passenger_counts(
+                passenger_quality_arr,
+                die_mods_obj,
+                trade_tables_obj,
+                highest_skill,
+                steward_skill,
+                source_planet,
+                destination_planet,
+                parsecs_travelled,
+            )
 
-    cargo_size_arr = generate_freight_sizes()
+            freight_quality_arr = [1, 2, 3]
+            freight_counts_dict = generate_freight_counts(
+                freight_quality_arr,
+                die_mods_obj,
+                trade_tables_obj,
+                highest_skill,
+                source_planet,
+                destination_planet,
+                parsecs_travelled,
+            )
 
-    mail_exists = check_if_mail_exists(
-        die_mods_obj,
-        source_planet,
-        destination_planet,
-        armed=0,
-        naval_or_scout_rank=4,
-        social_die_mod=1,
-    )
+            cargo_size_arr = generate_freight_sizes()
 
-    print_available_traffic(
-        passenger_counts_dict, freight_counts_dict, cargo_size_arr, mail_exists
-    )
+            mail_exists = check_if_mail_exists(
+                die_mods_obj,
+                source_planet,
+                destination_planet,
+                armed=0,
+                naval_or_scout_rank=4,
+                social_die_mod=1,
+            )
+            window.close()
+            layout = create_layout_2()
+            window = sg.Window("Trade Federation Network", layout, icon=icon_path)
 
-    print("\nThank you for using the Galactic Trade Network!")
+            print_available_traffic(
+                passenger_counts_dict, freight_counts_dict, cargo_size_arr, mail_exists
+            )
 
     window.close()
