@@ -8,13 +8,244 @@
         <TravelZone>A</TravelZone>
     </Planet>
 
-
     <Planet>
         <Name>Corgi2</Name>
         <UWP>CA6A643-9</UWP>
         <Bases>N</Bases>
         <TradeCodes>Ri, Wa</TradeCodes>
         <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Mug</Name>
+        <UWP>D633420-6</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ni</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Zhang's World</Name>
+        <UWP>D546366-2</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>Lo, Lt</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Town</Name>
+        <UWP>A664865-E</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>Ri, Ht</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Ganpe</Name>
+        <UWP>A761556-9</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ni</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>San Athiya</Name>
+        <UWP>C559789-6</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>EMPTY</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Port Finlay</Name>
+        <UWP>C6459C9-A</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>EMPTY</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Thermopolis</Name>
+        <UWP>A486315-C</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ht, Lo</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>FD-4KY-1</Name>
+        <UWP>X68A000-0</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ba, Wa</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Port Angel</Name>
+        <UWP>B525AE9-A</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>Hi, In</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Cloister</Name>
+        <UWP>B589567-8</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ni</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Blob World</Name>
+        <UWP>X7C0B00-E</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>EMPTY</TradeCodes>
+        <TravelZone>R</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Clyde's World</Name>
+        <UWP>E9A7650-8</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ni</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Bortang</Name>
+        <UWP>D645323-8</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Lo</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>St. Nanak</Name>
+        <UWP>A200768-E</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>De, Ht, Na, Va</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Hygwapha</Name>
+        <UWP>D77A8B9-7</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Wa</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>qw'ict</Name>
+        <UWP>B9A45A7-9</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>Ag, Fl, Ni</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Bolton</Name>
+        <UWP>B524442-A</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>Ni</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Port Spaatz</Name>
+        <UWP>E546366-5</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Lt, Lo</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Sapa Austin</Name>
+        <UWP>B568551-B</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>Ag, Ni</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Dodge</Name>
+        <UWP>C4238B8-9</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Na, Po</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Willemsted</Name>
+        <UWP>A765979-D</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>Ga, Hi, Ht</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>C3'transistor</Name>
+        <UWP>B230535-E</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>De, Ht, In</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>New Augusta</Name>
+        <UWP>B344AA0-D</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Hi, Ht, In</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>SE2A2X5</Name>
+        <UWP>X545540-0</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ag, Lt, Ni</TradeCodes>
+        <TravelZone>R</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>SE9Z3T3</Name>
+        <UWP>X120000-0</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ba</TradeCodes>
+        <TravelZone>A</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Outremer</Name>
+        <UWP>E740362-5</UWP>
+        <Bases>Y</Bases>
+        <TradeCodes>De, Lo, Lt</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Tigris</Name>
+        <UWP>D630462-5</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Di, Lt, Ni, Po</TradeCodes>
+        <TravelZone>C</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Dhirim</Name>
+        <UWP>C987674-6</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ag, Ni, Ri</TradeCodes>
+        <TravelZone>R</TravelZone>
+    </Planet>
+
+    <Planet>
+        <Name>Shtil</Name>
+        <UWP>B763556-8</UWP>
+        <Bases>N</Bases>
+        <TradeCodes>Ni</TradeCodes>
+        <TravelZone>C</TravelZone>
     </Planet>
 
 </System>
