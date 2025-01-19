@@ -38,7 +38,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Create exe with pyinstaller
       run: |
-        python -m -y nuitka --onefile --windows-icon-from-ico=ship-logo.ico --include-data-file="UWPCalc/item.xml=database" trade_app.py
+        python -m nuitka --onefile --windows-icon-from-ico=ship-logo.ico --include-data-file="UWPCalc/item.xml=database" trade_app.py
     - name: Upload the .exe artifact
       uses: actions/upload-artifact@v4
       with:
