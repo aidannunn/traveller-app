@@ -54,18 +54,18 @@ class DieMods:
 
     @staticmethod
     def planet_zone_passenger_mod(planet_zone):
-        if planet_zone == "amber":
+        if planet_zone == "A":
             return 1
-        elif planet_zone == "red":
+        elif planet_zone == "R":
             return -4
         else:
             return 0
 
     @staticmethod
     def planet_zone_cargo_mod(planet_zone):
-        if planet_zone == "amber":
+        if planet_zone == "A":
             return -2
-        elif planet_zone == "red":
+        elif planet_zone == "R":
             return -6
         else:
             return 0
