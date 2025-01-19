@@ -1,7 +1,7 @@
 from other_methods import *
 from trade_tables import *
 from die_mod_methods import *
-import PySimpleGUI as Sg
+import FreeSimpleGUI as Sg
 from counts_class import StuffCount
 
 
