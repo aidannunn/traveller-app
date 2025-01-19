@@ -1,4 +1,3 @@
-from idlelib.mainmenu import menudefs
 from pathlib import Path
 
 

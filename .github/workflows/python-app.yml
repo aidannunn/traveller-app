@@ -39,9 +39,11 @@ jobs:
     - name: Create exe with pyinstaller
       run: |
         pyinstaller --onefile --noconsole --icon=ship-logo.ico main.py
+    - name: List files in dist/ directory  # List the files in dist to see if exe was created
+      run: dir dist
     - name: Upload the .exe artifact
       uses: actions/upload-artifact@v3
       with:
         name: trade-app-exe
-        path: dist/trade_app.exe
+        path: dist/main.exe
         
