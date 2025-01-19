@@ -1,23 +1,45 @@
+from idlelib.mainmenu import menudefs
+from pathlib import Path
 from other_methods import *
 from trade_tables import *
 from die_mod_methods import *
 from UWPCalc.PlanetAPI import PlanetAPI
-
+import PySimpleGUI as sg
 
 if __name__ == "__main__":
     planet_api_obj = PlanetAPI()
+    home_dir = Path(__file__).parent
+    icon_path = home_dir.joinpath("ship-logo.ico")
 
-    print("Welcome to the Galactic Trade Network")
+    # All the stuff inside your window.
+    sg.theme("Neon Green 1")
 
-    departure_planet = "Corgi"  # input("Enter your departure planet:")
-    destination_planet = "Corgi2"  # input("Enter your destination planet:")
-    parsecs_travelled = 1  # input("Enter the number of parsecs you are travelling:")
-    highest_skill = 1  # input(
-    # "Enter the highest from among broker, carouse, or streetwise:"
-    # )
+    layout = [
+        [sg.Text("Welcome to the Trade Federation Network")],
+        [sg.Text("Departure:"), sg.InputText()],
+        [sg.Text("Destination:"), sg.InputText()],
+        [sg.Text("Distance:"), sg.InputText()],
+        [
+            sg.Text("Highest skill among broker, carouse, or streetwise:"),
+            sg.InputText(),
+        ],
+        [sg.Button("Ok"), sg.Button("Cancel")],
+    ]
+
+    # Create the Window
+    window = sg.Window("Trade Federation Network", layout, icon=icon_path)
+
+    # Event Loop to process "events" and get the "values" of the inputs
+    while True:
+        event, values = window.read()
+        if (
+            event == sg.WIN_CLOSED or event == "Cancel"
+        ):  # if user closes window or clicks cancel
+            break
+        print("You entered ", values[0])
 
     print(
-        f"Here is the available traffic from {departure_planet} to {destination_planet}\n"
+        f"\nHere is the available traffic from {departure_planet} to {destination_planet}"
     )
 
     steward_skill = -3
@@ -67,3 +89,5 @@ if __name__ == "__main__":
     )
 
     print("\nThank you for using the Galactic Trade Network!")
+
+    window.close()
