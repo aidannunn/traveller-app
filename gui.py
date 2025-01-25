@@ -140,6 +140,7 @@ class TradeGUI:
             [Sg.Text(f"Minor Freight Size: {counts_obj.minor_freight_size}")],
             [Sg.Text(f"Incidental Freight: {counts_obj.incidental_freight}")],
             [Sg.Text(f"Incidental Freight Size: {counts_obj.incidental_freight_size}")],
+            [Sg.Text(f"Mail Containers: 0")],
             [Sg.Text(f"Thank you for using the Galactic Trade Network!")],
             [Sg.Button("Back"), Sg.Button("Exit")],
         ]
