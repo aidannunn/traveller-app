@@ -18,6 +18,8 @@ class StuffCount:
         self.mail_exists = mail_exists
         if mail_exists:
             self.mail_containers = roll_die()
+        else:
+            self.mail_containers = 0
 
     # FIXME outdated - change to use self variables
     def print_available_traffic(
