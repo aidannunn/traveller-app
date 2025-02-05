@@ -1,0 +1,8 @@
+{
+    "location": "tigris",
+    "highest_skill": 1,
+    "steward_skill": 0,
+    "armed": false,
+    "naval_or_scout_rank": 4,
+    "social_die_mod": 1
+}
